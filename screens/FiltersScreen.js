@@ -4,7 +4,8 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
-
+import { useDispatch } from 'react-redux';
+import { setFilters } from '../store/actions/actionsMeals';
 // another component in the same file
 const FilterSwitch = (props) => {
   return (
@@ -27,6 +28,8 @@ const FiltersScreen = (props) => {
   const [isVegan, setIsVegan] = useState(false);
   const [isVegetarian, setIsVegetarian] = useState(false);
 
+  const dispatch = useDispatch();
+
   // in order to pass state to our navigation options
   // useCallback is used since we only want it to re-render if one of the 4 values change
   // otherwise the cached data is used
@@ -37,7 +40,7 @@ const FiltersScreen = (props) => {
       vegan: isVegan,
       vegetarian: isVegetarian,
     };
-    console.log(appliedFilters);
+    dispatch(setFilters(appliedFilters));
   }, [isGlutenFree, isVegetarian, isVegan, isLactoseFree]);
 
   // need to use useEffect to trigger everytime the state changes

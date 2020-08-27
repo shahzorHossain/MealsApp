@@ -4,12 +4,15 @@ A simple app that lets you view, filter and save different recipes. Created usin
 
 # Installation
 
-To start,
+Use the package manager npm to install the required dependencies.
 
 ```bash
 npm install
 ```
 
+To run the application,
+
 ```bash
 npm run
 ```
+

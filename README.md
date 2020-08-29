@@ -16,3 +16,11 @@ To run the application,
 npm run
 ```
 
+For iOS, scan the code using your iPhone; or
+
+run in simulator by pressing ``` i ```
+
+
+For Android, scan the code using your android; or
+
+run in simulator by pressing ``` a ```
